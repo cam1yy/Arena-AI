@@ -1,0 +1,23 @@
+{
+  "name": "@localy/database",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "exports": { ".": "./src/index.ts", "./schema": "./src/schema.ts" },
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json",
+    "generate": "drizzle-kit generate",
+    "migrate": "tsx src/migrate.ts",
+    "seed": "tsx src/seed.ts",
+    "setup": "tsx src/migrate.ts && tsx src/seed.ts",
+    "admin:grant": "tsx src/grant-admin.ts"
+  },
+  "dependencies": {
+    "@localy/config": "*",
+    "@localy/shared": "*",
+    "@node-rs/argon2": "^2.2.1",
+    "drizzle-orm": "^0.45.3",
+    "pg": "^8.23.0"
+  },
+  "devDependencies": { "@types/pg": "^8.23.1", "drizzle-kit": "^0.31.11" }
+}
