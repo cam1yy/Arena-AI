@@ -1,0 +1,17 @@
+{
+  "name": "@localy/email",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@localy/config": "*",
+    "@localy/shared": "*",
+    "nodemailer": "^10.0.10"
+  }
+}

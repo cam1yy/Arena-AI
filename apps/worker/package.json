@@ -1,0 +1,22 @@
+{
+  "name": "@localy/worker",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch --clear-screen=false src/main.ts",
+    "build": "tsup",
+    "start": "node dist/main.js",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@localy/config": "*",
+    "@localy/core": "*",
+    "@localy/database": "*",
+    "@localy/email": "*",
+    "@localy/shared": "*",
+    "drizzle-orm": "^0.45.3",
+    "pg-boss": "^12.33.7"
+  },
+  "devDependencies": { "tsup": "^8.5.1" }
+}
